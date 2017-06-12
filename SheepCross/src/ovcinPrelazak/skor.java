@@ -17,9 +17,9 @@ public class skor extends JFrame{
     private static JLabel[] imeIgraca = new JLabel[11];
     private static JLabel[] pozicija = new JLabel[11];
     private static JLabel[] listaOsvojenihPoena = new JLabel[11];
-
+    
     private static ArrayList<String> scoreTracker = new ArrayList<>();
-
+    
     public skor(String ime, int osvojenihPoena, Component panel) throws HeadlessException {
         postavi(panel);
         setScore(ime, osvojenihPoena);
@@ -52,7 +52,7 @@ public class skor extends JFrame{
             add(imeIgraca[i]);
             add(listaOsvojenihPoena[i]);
         }
-
+        
         for (int i = 0; i < scoreTracker.size(); i++) {
             spliter = scoreTracker.get(i).split("-");
             imeIgraca[i].setText(spliter[0]);
@@ -77,7 +77,7 @@ public class skor extends JFrame{
                 }
                 listaOsvojenihPoena[i].setText("" + score);
                 listaOsvojenihPoena[i].setVisible(true);
-
+                
                 String nameToPut = ime + "-" + score;
                 scoreTracker.set(i, nameToPut);
                     break;
@@ -95,12 +95,12 @@ public class skor extends JFrame{
             listaOsvojenihPoena[i].setText(spliter[1]);
         }
         writeTextFileLineByLine();
-    };
+    }; 
     public static void readTextFileLineByLine() {
         FileReader in = null;
-
+        //BufferedReader dozvoljava čitanje većeg "komada" datoteke odjednom.
         BufferedReader bin = null;
-
+        
         File file = new File(".\\files\\rezultati.txt");
         scoreTracker.clear();
         try {

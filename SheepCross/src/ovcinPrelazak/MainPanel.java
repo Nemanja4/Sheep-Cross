@@ -81,7 +81,7 @@ public final class MainPanel extends javax.swing.JPanel implements ActionListene
     private void dodajPrepreku() {
         Random random = new Random();
         int prolaza = 0;
-        int strana = random.nextInt(2);
+        int strana = random.nextInt(2); // uzima 0 ili jedan proizvoljno
         int mjestoPrepreke = random.nextInt(moguciRedPrepreke)*Prepreke.getVisinaPrepreke();
         int brzina = random.nextInt(4) + 1;
         boolean vecPostoji = false;

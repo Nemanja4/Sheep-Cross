@@ -1,0 +1,1 @@
+ovcinPrelazak.Prepreke

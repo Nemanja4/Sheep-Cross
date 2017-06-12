@@ -61,7 +61,7 @@ public class Prepreke {
 
     public static void loadImages() {
         try {
-            slikaPrepreke = ImageIO.read(new File("src/images/voda_velika.jpg"));
+            slikaPrepreke = ImageIO.read(new File("src/images/auto.jpg"));
             ucitanaSlika = true;
         } catch (IOException e) {
             ucitanaSlika = false;
